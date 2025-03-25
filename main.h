@@ -5,12 +5,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h>
 
 
 /**
  * struct specifier - Struct for format specifiers
  * @format: The format specifier (e.g., 'c', 's', 'd')
- * @f: Function pointer to corresponding handler function
+ * @fptr_process_format: Function pointer to corresponding handler function
  */
 
 typedef struct specifier
@@ -26,5 +27,6 @@ int process_format(char spec, va_list args);
 int print_char(va_list args);
 int print_str(va_list args);
 int print_percent(va_list args);
+int print_int(va_list args);
 
 #endif
