@@ -4,12 +4,12 @@
  * _printf - A simple printf function that handles format specifiers.
  * @format: The format string containing format specifiers.
  *
- * Description: This function processes the format string, prints characters
- *              and calls the appropriate functions for each format specifier
- *              (%c, %s, etc.) while handling any edge cases like consecutive
- *              '%' characters.
+ * Description: This function iterates through the format string and prints
+ *              characters accordingly. It calls the appropriate handler
+ *              functions for each format specifier (%c, %s, etc.) while
+ *              managing edge cases, such as consecutive '%' characters.
  *
- * Return: Returns the number of characters printed, or -1 if an error occurs.
+ * Return: The number of characters printed, or -1 if an error occurs.
  */
 
 int _printf(const char *format, ...)
