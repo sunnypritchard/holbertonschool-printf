@@ -1,0 +1,13 @@
+# Ignore test folder
+test
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Editor and OS-specific files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
