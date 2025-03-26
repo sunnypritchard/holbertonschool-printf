@@ -123,8 +123,6 @@ sunny-pritchard@agent007:~/Work/holbertonschool-printf/test$ make valgrind
 
 ## Flowchart
 
-## Flowchart
-
 <div align="center">
 	<img src="/img/flowchart.png">
 </div>
