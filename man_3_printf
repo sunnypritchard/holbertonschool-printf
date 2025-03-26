@@ -1,7 +1,7 @@
-.TH _printf 3
+.TH _PRINTF 3 "25 March 2025" "0.1" "Custom _printf Manuel"
 
 .SH NAME
-_printf - A simple printf function that handles format specifiers.
+_printf - A custom printf function that handles format specifiers.
 
 .SH SYNOPSIS
 .B #include "main.h"
@@ -35,10 +35,10 @@ Returns the number of characters printed (excluding the null byte) or -1 if an e
 Example usage of _printf:
 .PP
 .nf
-_printf("Character: %c\n", 'A');
-_printf("String: %s\n", "Hello, Holberton!");
-_printf("Integer: %d\n", 1234);
-_printf("Percent: %%\n");
+_printf("Character: %c", 'A');
+_printf("String: %s", "Hello, Holberton!");
+_printf("Integer: %d", 1234);
+_printf("Percent: %%");
 .fi
 
 .SH AUTHORS
