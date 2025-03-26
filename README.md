@@ -123,7 +123,12 @@ sunny-pritchard@agent007:~/Work/holbertonschool-printf/test$ make valgrind
 
 ## Flowchart
 
-<img src="/img/Flowchart _printf1.jpg" alt="Flowchart of _printf" width="600">
+## Flowchart
+
+<div style="text-align: center;">
+    <img src="/img/Flowchart_printf1.jpg" alt="Flowchart of _printf" width="900" height="600">
+</div>
+
 
 ## Authors
 
