@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "25 March 2025" "0.1" "Custom _printf Manuel"
+.TH _PRINTF 3 "Custom _printf Manuel"
 
 .SH NAME
 _printf - A custom printf function that format and print data.
@@ -8,7 +8,7 @@ _printf - A custom printf function that format and print data.
 .br
 .B int _printf(const char *format, ...);
 
-.SH DESCRIPTIONhandles format specifiers
+.SH DESCRIPTION
 .B _printf
 is a custom implementation of the standard printf function.
 It iterates through the format string and prints characters accordingly.
