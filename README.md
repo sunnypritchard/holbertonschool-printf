@@ -1,16 +1,15 @@
-# Project _printf
+# _printf
 
-## Project description
+![_printf Banner](/img/_printf-banner.png)
 
-This project is about recreating a simplified version of the standard `printf` function in C. The `_printf` function allows you to display formatted strings based on the provided arguments.
 
-## Features
+## Description
 
-- Supports common format specificiers (`%c`, `%s`, `%d`, `%i`).
-- Use `va_list` to handle a variable number of arguments.
-- Directly prints to the standard output.
+This project involves creating a custom implementation of the standard printf function in C.
+The _printf function allows you to display formatted output based on format specifiers and provided arguments.
 
-## Complilation Command
+
+## Compilation Command
 
 To compile `_printf`, use the following command:
 
@@ -18,9 +17,9 @@ To compile `_printf`, use the following command:
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ```
 
-## Requierements
+## Requirements
 
-The project was developed and tested in the following envirenment:
+The project was developed and tested in the following environment:
 
 - Ubuntu 20.04 LTS
 - GCC (GNU Compiler Collection)
@@ -51,36 +50,82 @@ Hello, world!
 ```c
 int main(void)
 {
-	_printf("The first number is: %d and second number is: %i\n", 42, 85)
+	_printf("The first number is: %d and second number is: %i\n", 42, 85);
+	return (0);
 }
 ```
 
 **Expected Output:**
 
 ```
-The first number is: 42 ans second number is: 85
+The first number is: 42 and second number is: 85
 ```
 
 ## Man Page
 
-To display the manual page for `_printf`, use the following command after adding it to the system:
+To view the manual page for `_printf`, use the following command:
 
 ```sh
-Sunny
+man ./man_3_printf
+```
+
+To make the man page globally accessible, move it to the system’s manual directory:
+
+```sh
+# Check your man path
+manpath 
+```
+
+```sh
+sudo mv man_3_printf /usr/local/man/man3/
+sudo mandb  # Update the man database
+```
+Then, you can simply use:
+```sh
+man man_3_printf
 ```
 
 ## Testing
 
-Tests are conducted using test files with different use cases. To execute the tests:
+To run tests, use the [Makefile](/Makefile) to check the overall functionality of the program, compile with `main.c` as the main file:
+
+Run `make` or `make all` to compile
 
 ```sh
-Sunny
+sunny-pritchard@agent007:~/Work/holbertonschool-printf/test$ make
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format -o printf main.c print_char.c _printf.c print_int.c print_percent.c print_str.c process_format.c _putchar.c
+```
+Execute the compiled program:
+```sh
+sunny-pritchard@agent007:~/Work/holbertonschool-printf/test$ ./printf 
+
+Let's try to printf a simple sentence.
+Let's try to printf a simple sentence.
+Length:[39, 39]
+Length:[39, 39]
+Negative:[-762534]
+Negative:[-762534]
+```
+Run `make valgrind` to check for memory leaks
+```sh
+sunny-pritchard@agent007:~/Work/holbertonschool-printf/test$ make valgrind
+
+==87208== HEAP SUMMARY:
+==87208==     in use at exit: 0 bytes in 0 blocks
+==87208==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==87208== 
+==87208== All heap blocks were freed -- no leaks are possible
+==87208== 
+==87208== For lists of detected and suppressed errors, rerun with: -s
+==87208== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
 
 ## Flowchart
 
+<img src="/img/Flowchart _printf1.jpg" alt="Flowchart of _printf" width="200">
 
 ## Authors
 
-- [PRITCHARD Sunny] (https://github.com/sunnypritchard)
-- [VENTURA Jules] (https://github.com/Juleslgc)
+- [PRITCHARD Sunny](https://github.com/sunnypritchard)
+- [VENTURA Jules](https://github.com/Juleslgc)
