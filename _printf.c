@@ -23,6 +23,10 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+	if (*(format + 1) == 0)
+	{
+		return (-1);
+	}
 
 	va_start(args, format);
 
